@@ -8,7 +8,7 @@ Deface::Override.new(
               <ul>
                 <% item.digital_links.each do |digital_link| %>
                   <li>
-                    <%= link_to Spree.t('digitals.digital_download', filename: raw(digital_link.digital.attachment_file_name)), digital_url(secret: digital_link.secret) %>
+                    <%= link_to Spree.t('digitals.digital_download', filename: raw(digital_link.digital.attachment_file_name)), spree.digital_url(secret: digital_link.secret) %>
                   </li>
                 <% end %>
               </ul>
